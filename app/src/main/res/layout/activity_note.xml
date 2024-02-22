@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutNote"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.NoteActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageNoteBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_back"
+        android:tint="@color/colorAccent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="26dp"
+        android:includeFontPadding="false"
+        android:text="My Notes"
+        android:textSize="26sp"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/ubuntu_bold"
+        app:layout_constraintTop_toBottomOf="@+id/imageNoteBack"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintTop_toBottomOf="@id/textNote"
+        style="@style/Widget.Material3.CardView.Filled"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
+        >
+
+        <LinearLayout
+            android:id="@+id/layoutSearchFolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/toolbarFolder"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_search"
+                android:tint="@color/colorSearchIcon"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/textSearchFolder"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@null"
+                android:fontFamily="@font/ubuntu_regular"
+                android:hint="Search"
+                android:textColor="@color/colorWhite"
+                android:inputType="text"
+                android:textColorHint="@color/colorTextHint"
+                android:imeOptions="actionDone"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/noteRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/item_container_note"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:clipToPadding="false"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@id/cardViewNoteQuickActions"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewNote"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewNoteQuickActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.CardView.Filled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/layoutQuickActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorQuickActionBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp"
+
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/totalNoteInFolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="99 notes"
+                android:gravity="center_horizontal"
+                android:layout_marginStart="160dp"
+                android:textSize="14sp"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageAddNote"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="112dp"
+                android:src="@drawable/ic_note_add"
+                android:tint="@color/colorAccent"
+                />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

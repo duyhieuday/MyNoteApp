@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutEditFolderContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="13dp"
+    android:background="@drawable/background_dialog">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageEditFolderDialog"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_folder"
+        android:tint="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="Edit Folder"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageEditFolderDialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageEditFolderDialog"
+        app:layout_constraintTop_toTopOf="@+id/imageEditFolderDialog"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/inputEditFolder"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@null"
+        android:fontFamily="@font/ubuntu_regular"
+        android:gravity="center_vertical"
+        android:hint="Enter New Name Folder"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="textUri"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorTextHint"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/imageEditFolderDialog"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:padding="10dp"
+        android:text="Edit"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputEditFolder"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:padding="10dp"
+        android:text="Cancel"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textEdit"
+        app:layout_constraintTop_toBottomOf="@id/inputEditFolder"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

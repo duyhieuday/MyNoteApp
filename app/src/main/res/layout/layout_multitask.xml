@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutMultitask"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_margin="12dp"
+    android:background="@drawable/background_dialog">
+
+    <FrameLayout
+        android:id="@+id/layoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Setting"
+            android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/ubuntu_bold"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:paddingHorizontal="48dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageClose"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="end"
+            android:src="@drawable/icon_close"
+            android:tint="@color/colorWhite"
+            android:layout_margin="16dp"
+            />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ccc"
+        />
+
+    <LinearLayout
+        android:id="@+id/layoutEditMultitask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageEditMultitask"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_edit"
+            android:tint="@color/colorWhite"
+            android:layout_gravity="center"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textEditMultitask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit name"
+            android:textSize="16sp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center"
+            />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutDeleteMultitask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutEditMultitask"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="16dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_delete"
+            android:tint="@color/colorDelete"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:fontFamily="@font/ubuntu_bold"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/colorDelete"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
